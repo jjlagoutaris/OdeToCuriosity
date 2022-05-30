@@ -1,5 +1,6 @@
 let round = 0;
-let answers = ['sponge',];
+let answers = ['sponge', 'all', 'towel', 'age', 'darkness', 'future'];
+let outcomeResult = 'incorrect';
 
 function clearScreenAndLoadRiddle() {
   document.body.innerHTML = ``;
@@ -54,19 +55,24 @@ const createHelpModal = () => {
   return { newModal, helpModalForm, continueBtn, help };
 };
 
-function createSuccessModal() {
+function createOutcomeModal() {
   const newModal = document.createElement('dialog');
-  newModal.classList.add('successModal');
-  newModal.setAttribute('id', 'successModal');
+  newModal.classList.add('outcomeModal');
+  newModal.setAttribute('id', 'outcomeModal');
 
-  const successModalForm = document.createElement('form');
-  successModalForm.classList.add('successForm');
-  successModalForm.setAttribute('method', 'dialog');
+  const outcomeModalForm = document.createElement('form');
+  outcomeModalForm.classList.add('outcomeForm');
+  outcomeModalForm.setAttribute('method', 'dialog');
 
-  const success = document.createElement('p');
-  success.style = `font-size: 24px`;
-  success.innerHTML = `Correct!`;
+  const outcome = document.createElement('p');
+  outcome.style = `font-size: 24px`;
 
+  if(outcomeResult == 'correct'){
+    outcome.innerHTML = `Correct!`;
+  } else{
+    outcome.innerHTML = `Incorrect - try again :)`;
+  }
+  
   const continueBtn = document.createElement('button');
   continueBtn.textContent = `CONTINUE`;
   continueBtn.classList.add('continueBtn');
@@ -81,11 +87,11 @@ function createSuccessModal() {
     clearScreenAndLoadRiddle();
   });
 
-  successModalForm.appendChild(help);
-  successModalForm.appendChild(continueBtn);
-  newModal.appendChild(successModalForm);
+  outcomeModalForm.appendChild(outcome);
+  outcomeModalForm.appendChild(continueBtn);
+  newModal.appendChild(outcomeModalForm);
 
-  return { newModal, successModalForm, continueBtn, success };
+  return { newModal, outcomeModalForm, continueBtn, outcome };
 }
 
 function loadRiddle() {
@@ -107,8 +113,13 @@ function loadRiddle() {
   guessBtn.addEventListener('click', () => {
     if (guess.value === answers[round]) {
       round++;
-      clearScreenAndLoadRiddle();
+      outcomeResult = 'correct';
+    } else{
+      outcomeResult = 'incorrect';
     }
+    const outcomeModal = createOutcomeModal();
+    document.body.append(outcomeModal.newModal);
+    outcomeModal.newModal.showModal();
   })
 
   container.append(title, guess, guessBtn);
