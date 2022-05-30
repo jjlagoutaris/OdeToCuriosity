@@ -1,0 +1,126 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background: url(./imgs/bg.jpg) center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.riddleContainer{
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  
+}
+.riddleContainer .guessBtn{
+  background-color: greenyellow;
+  font-size: 16px;
+  padding: 5px;
+}
+.startBtn{
+  font-size: 24px;
+  margin: 10px;
+  padding: 10px;
+  background-color: greenyellow;
+}
+
+input[type="text"].guess{
+  padding: 10px;
+}
+.guess:hover{
+  cursor: pointer;
+  background-color: powderblue;
+}
+
+#helpModal {
+  margin: auto auto;
+  max-width: 100ch;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#helpModal h2 {
+  letter-spacing: 5px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+#helpModal .helpForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  max-width: 400px;
+  max-height: 600px;
+}
+
+#helpModal .helpForm label, #helpModal .helpForm input[type="text"], #helpModal .helpForm .btns {
+  letter-spacing: 1px;
+  width: 200px;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#helpModal .helpForm label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#helpModal .helpForm input[type="text"] {
+  padding: 5px;
+}
+
+#helpModal .helpForm .btns .cancelEditBtn, #helpModal .helpForm .btns .submitEditBtn {
+  background-color: greenyellow;
+  max-width: 50px;
+  padding: 10px;
+}
+
+#helpModal > * {
+  margin: 0 0 0.5rem 0;
+}
+
+#helpModal::-webkit-backdrop {
+  background-color: black;
+  opacity: .75;
+}
+
+#helpModal::backdrop {
+  background-color: black;
+  opacity: .75;
+}
+
+#helpModal .helpForm{
+
+}
+
+#helpModal .continueBtn{
+  padding: 10px; 
+  margin: 10px;
+  background-color: greenyellow;
+  border-radius: 5px;
+  font-size: 24px;
+}
