@@ -1,5 +1,6 @@
 let round = 0;
-let answers = ['sponge', 'all', 'towel', 'age', 'darkness', 'future'];
+let answers = ['sponge', 'all', 'towel', 'age', 'darkness', 
+'future', 'promise', 'bald', 'hidden', 'technology', 'magic', 'incorrectly'];
 let outcomeResult = 'incorrect';
 
 function clearScreenAndLoadRiddle() {

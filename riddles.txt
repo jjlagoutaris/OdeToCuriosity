@@ -15,7 +15,11 @@ remove opacity to reveal hint
 6. What is always in front of you but can’t be seen? A. future
 7. What can you break, even if you never pick it up or touch it? A. promise
 8. A man who was outside in the rain without an umbrella or hat didn't get a single hair on his head wet. Why? A. bald
-9. sometimes one must relinquish ConTRoL if they want to SHIFT their focus beyond what's visible - beyond what you can C. A. Ctrl+shift+C 
-10. don't leave just yet. first try taking a long scroll down the P...ier and look for any buried treasure. :) A. scroll down elements tab and find next clue
-11. keep scrolling :) A. revealed by page
-12. 
+9. sometimes one must relinquish ConTRoL if they want to SHIFT their focus beyond what's visible - beyond what you can C. A. Ctrl+shift+C / hidden
+10. don't leave just yet. first try taking a long scroll down the P...ier and look for any buried treasure. :) A. scroll down elements tab and find next clue / technology
+11. keep scrolling :) A. revealed by page / magic
+12. Okay, last bonus riddle: What word in the dictionary is spelled incorrectly? A. incorrectly
+
+SEQUEL IDEA: 
+
+Slow down animation to readable speed
