@@ -1,4 +1,4 @@
-let round = 10;
+let round = 0;
 let answers = ['sponge', 'all', 'towel', 'age', 'darkness', 
 'future', 'promise', 'bald', 'hidden', 'technology', 'magic', 'incorrectly'];
 let outcomeResult = 'incorrect';
@@ -260,9 +260,9 @@ function clearScreenAndLoadRiddle() {
   } else if (round == 12){
     document.body.innerHTML = `
     <!-- Good job! Thanks for playing! :) - John -->`;
-    document.body.style = `background: url(./imgs/end.jpg) center / cover no-repeat; background-color: white`;
+    document.body.style = `background: url(./imgs/end.gif) center / cover no-repeat; background-color: white`;
   } else{
-    document.body.innerHTML;
+    document.body.innerHTML = ``;
     loadRiddle();
     document.body.style = `background: url(./imgs/bg.jpg) center / cover no-repeat; background-color: white`;
   }
