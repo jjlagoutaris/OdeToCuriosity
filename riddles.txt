@@ -23,3 +23,5 @@ remove opacity to reveal hint
 SEQUEL IDEA: 
 
 Slow down animation to readable speed
+
+Add trail of comment clues in each riddle's html section
